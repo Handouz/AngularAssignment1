@@ -9,6 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class StarComponent {
 @Input()color: string='';
-@Input() title: string='';
 
 }

@@ -9,9 +9,7 @@ import { StarComponent } from '../star/star.component';
   styleUrl: './portofolio.component.css',
 })
 export class PortofolioComponent {
-  //Star component inputs
-  title: string = 'portofolio section';
-  color: string = 'rgb(44, 62, 80)';
+  
   
   
 
