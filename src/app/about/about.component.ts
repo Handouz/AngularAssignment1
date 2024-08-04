@@ -9,7 +9,5 @@ import { StarComponent } from '../star/star.component';
   styleUrl: './about.component.css',
 })
 export class AboutComponent {
-  //Star component inputs
-  title: string = 'about component';
-  color: string = 'white';
+  
 }

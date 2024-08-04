@@ -9,10 +9,7 @@ import { StarComponent } from '../star/star.component';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  //Star component inputs
-  title: string = 'conatct section';
-  color: string = 'rgb(44, 62, 80)';
-  backgroundColor: string = 'rgb(44, 62, 80)';
+  
 
   SetVisibility(e: KeyboardEvent) {
     const target = e.target as HTMLInputElement;

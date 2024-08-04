@@ -9,8 +9,5 @@ import { StarComponent } from '../star/star.component';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  //Star component inputs
-  title: string = 'start Framework';
-  color: string = 'white';
-  backgroundColor: string = 'white';
+  
 }
