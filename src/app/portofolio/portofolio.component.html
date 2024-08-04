@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-center align-items-center bg-light" style="padding-top:10%">
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center  text-uppercase">portofolio section</h1>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-center text-center">
+                <div class="bg-dark m-3" style="width: 70px; height: 0.25rem;"></div>
+                <i class="fa-solid fa-star text-dark"></i>
+                <div class="bg-dark align-item-left m-3" style="width: 70px; height: 0.25rem ;"></div>
+            </div>
+        </div>
+        <div class="row g-5 p-5">
+            @for (item of images; track $index) {
+            <div class="col-lg-4 col-md-6">
+                <div class="rounded-3 overflow-hidden position-relative" (mouseover)="mouseOver($index)"
+                    (mouseleave)="mouseLeave()" style="background-size: cover;">
+                    <img [src]="item" alt="portofolio" class="w-100 rounded-3">
+                    @if (hoveredIndex == $index) {
+                    <div class="position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center"
+                        style=" cursor: pointer; transition: 0.6s opacity;">
+                        <i class="text-white fa-solid fa-plus  rounded text-center text-opacity-100 w-100 h-100"
+                            style="font-size: 8rem; padding-top: 18%; background-color: rgba(26, 188, 156, 0.9)"
+                            (click)="showModal(item)"></i>
+                    </div>
+                    }
+                </div>
+            </div>
+            }@empty {
+            <div class="text-center">No images available</div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            @if (selectedImage) {
+            <img [src]="selectedImage" alt="Selected Image">
+            }
+        </div>
+    </div>
+</div>

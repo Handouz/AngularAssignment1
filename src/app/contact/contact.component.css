@@ -1,0 +1,7 @@
+.form-control:focus{
+border:none;
+box-shadow: none;
+}
+label{
+    color: #1abc9c;
+}
