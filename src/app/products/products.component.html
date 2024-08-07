@@ -1,0 +1,18 @@
+<div class="container" style="padding-top: 7%;">
+    <div class="row">
+        <!-- @for (product of Products; track $index) { -->
+        @defer (on timer(3s)) {
+        @for (product of Products; track product.id;) {
+        <div class="col-md-3">
+            <app-product [product]="product"></app-product>
+        </div>
+        }@empty {
+        <app-no-data-found></app-no-data-found>
+        }
+        }@loading {
+        <h1>Loading...</h1>
+        }@error {
+        <h1>Error fetching data</h1>
+        }
+    </div>
+</div>

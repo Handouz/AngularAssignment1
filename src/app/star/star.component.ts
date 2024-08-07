@@ -5,9 +5,8 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './star.component.html',
-  styleUrl: './star.component.css'
+  styleUrl: './star.component.css',
 })
 export class StarComponent {
-@Input()color: string='';
-
+  @Input({ required: true }) isWhite!: boolean;
 }

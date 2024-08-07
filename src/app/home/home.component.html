@@ -3,10 +3,12 @@
         style="background-color: #1abc9c;padding-top:7%">
         <div class="text-center">
             <img src="assets/Img/avataaars.svg" alt="" class="mb-3">
-            <app-star [color]="'white'">
+            <app-star [isWhite]="true">
                 start Framework
             </app-star>
             <div>Graphic Artist - Web Designer - Illustrator</div>
+            <!-- <input type="text" (keydown.k)="Welcome()" [attr.custom-attribute]="Welcome()"/> -->
+             <button [class.text-white]="isWhiteText" [class.bg-danger]="isButtondanger">Hello world</button>
         </div>
     </div>
 </div>

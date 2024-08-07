@@ -4,6 +4,7 @@ import { PortofolioComponent } from './portofolio/portofolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
 
 export const routes: Routes = [
 
@@ -11,6 +12,7 @@ export const routes: Routes = [
     {path:'home',component:HomeComponent,title:'Home'},
     {path:'about',component:AboutComponent,title:'About'},
     {path:'portofolio',component:PortofolioComponent,title:'Portofolio'},
+    {path:'products',component:ProductsComponent,title:'Products'},
     {path:'contact',component:ContactComponent,title:'Contact'},
     {path:'**',component:NotFoundComponent,title:'Not Found'}
 ];

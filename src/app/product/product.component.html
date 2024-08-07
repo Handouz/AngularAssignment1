@@ -1,0 +1,19 @@
+<div class="item p-2 m-2 ">
+    <div class= "position-relative">
+       <img [src]="product.thumbnail">
+        <div class="bg-warning align-content-center p-2 bg-opacity-75 text-white" style="position: absolute; top:0px; right:0px;">
+            {{product.discountPercentage}}%
+        </div>
+    </div>
+    <h4 class="text-muted">
+        {{product.title}}
+    </h4>
+    <p>{{product.description}}</p>
+    <ul>
+        @for (review of product.reviews; track $index) {
+        <li>{{review.comment}}</li>
+        }@empty {
+        <div class="text-center">No reviews</div>
+        }
+    </ul>
+</div>

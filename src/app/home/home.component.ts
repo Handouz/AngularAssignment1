@@ -9,5 +9,9 @@ import { StarComponent } from '../star/star.component';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  
+isButtondanger: boolean=true;
+isWhiteText: boolean=true;
+  Welcome() {
+    alert('Hello World');
+  }
 }

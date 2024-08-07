@@ -5,7 +5,7 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes,
-     withHashLocation(),
-      withInMemoryScrolling({scrollPositionRestoration:'top'})
+     withHashLocation(),//add hash to the url
+      withInMemoryScrolling({scrollPositionRestoration:'top'})//while going back to the page it scrolls to the top of the component
     )]
 };
