@@ -1,0 +1,25 @@
+<div class="container" style="padding-top: 2%;">
+    <button #btn class="btn btn-primary text-uppercase">load products</button>
+</div>
+@defer(on timer(15s);on interaction(btn)){
+<div class="container" style="padding-top: 7%;">
+    <div class="row">
+        <!-- @for (product of Products; track $index) { -->
+
+        @for (product of Products; track product.id;) {
+        <div class="col-md-3">
+            <app-product [product]="product"></app-product>
+        </div>
+        }@empty {
+        <app-no-data-found></app-no-data-found>
+        }
+    </div>
+</div>
+}@placeholder {
+<div class="container text-center" style="padding-top: 7%;">
+    <h3 class="text-warning">Click the load products button to load the products or products will be loaded
+        automatically in 15 seconds</h3>
+    <img src="./assets/Img/Loading_2.gif" class="w-25 h-25">
+</div>
+
+}

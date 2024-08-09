@@ -1,8 +1,8 @@
-import Dimension from './Dimensions';
-import Meta from './Meta';
-import Reviews from './Reviews';
+import Dimension from './IDimensions';
+import Meta from './IMeta';
+import Reviews from './IReviews';
 
-interface Product {
+export default interface IProduct {
   id: number;
   title: string;
   description: string;
@@ -27,4 +27,4 @@ interface Product {
   thumbnail?: string;
 }
 
-export default Product;
+//export default Product;

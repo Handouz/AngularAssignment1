@@ -1,0 +1,31 @@
+<div class="container" style="padding-top: 1.5%;">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Role</label>
+        </div>
+        <div class="col-4">
+            <input type="text" class="form-control" placeholder="Enter your role" [(ngModel)]="searchText">
+        </div>
+    </div>
+</div>
+@defer (when searchText==='admin') {
+<div class="container" style="padding-top: 7%;">
+    <div class="row">
+        <!-- @for (product of Products; track $index) { -->
+
+        @for (product of Products; track product.id;) {
+        <div class="col-md-3">
+            <app-product [product]="product"></app-product>
+        </div>
+        }@empty {
+        <app-no-data-found></app-no-data-found>
+        }
+    </div>
+</div>
+}@placeholder {
+    <div class="container text-center" style="padding-top: 7%;">
+        <h3 class="text-warning">Enter your role, Note that if the role is <strong class="text-danger">admin</strong> the content will be loaded</h3>
+        <img src="./assets/Img/Loading_2.gif" class="w-25 h-25">
+    </div>
+    
+    }

@@ -1,18 +1,39 @@
 <div class="container" style="padding-top: 7%;">
-    <div class="row">
-        <!-- @for (product of Products; track $index) { -->
-        @defer (on timer(3s)) {
-        @for (product of Products; track product.id;) {
-        <div class="col-md-3">
-            <app-product [product]="product"></app-product>
-        </div>
-        }@empty {
-        <app-no-data-found></app-no-data-found>
-        }
-        }@loading {
-        <h1>Loading...</h1>
-        }@error {
-        <h1>Error fetching data</h1>
-        }
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active text-dark text-uppercase fw-bold mt-3 mt-md-0 px-2" id="all-tab"
+        data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane"
+        aria-selected="true" routerLink="all" routerLinkActive=" bg-info text-white">all products</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active text-dark text-uppercase fw-bold mt-3 mt-md-0 px-2" id="food-tab"
+        data-bs-toggle="tab" data-bs-target="#food-tab-pane" type="button" role="tab" aria-controls="food-tab-pane"
+        aria-selected="false" routerLink="food" routerLinkActive=" bg-info text-white">food</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active text-dark text-uppercase fw-bold mt-3 mt-md-0 px-2" id="beauty"
+        data-bs-toggle="tab" data-bs-target="#beauty-tab-pane" type="button" role="tab" aria-controls="beauty-tab-pane"
+        aria-selected="false" routerLink="beauty" routerLinkActive=" bg-info text-white">beauty</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active text-dark text-uppercase fw-bold mt-3 mt-md-0 px-2" id="wood-tab"
+        data-bs-toggle="tab" data-bs-target="#wood-tab-pane" type="button" role="tab" aria-controls="wood-tab-pane"
+        aria-selected="false" routerLink="wood" routerLinkActive=" bg-info text-white">wood</button>
+    </li>
+
+
+    <form class="ms-auto" role="search">
+      <div class="input-group mb-3">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="searchText">
+      </div>
+    </form>
+
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <router-outlet></router-outlet>
     </div>
+  </div>
+
+
 </div>

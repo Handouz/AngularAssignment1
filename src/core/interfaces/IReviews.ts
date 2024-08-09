@@ -1,4 +1,4 @@
-interface Reviews {
+export default interface IReviews {
     rating:number;
     comment:string;
     date:string;
@@ -6,4 +6,4 @@ interface Reviews {
     reviewerEmail:string;
 }   
 
-export default Reviews;
+//export default Reviews;
